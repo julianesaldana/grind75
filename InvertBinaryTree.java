@@ -3,8 +3,7 @@ public class InvertBinaryTree {
     }
 
     public TreeNode invertTree(TreeNode root) {
-        TreeNode invertedRoot = root;   // store root
-        if (! (root == null)) {
+        if (root != null) {
             // using recursion, want to swap every leaves left and right
             invertTree(root.left);
             invertTree(root.right);
@@ -15,7 +14,7 @@ public class InvertBinaryTree {
             root.right = temp;
         }
 
-        return invertedRoot;
+        return root;
     }
 }
 
