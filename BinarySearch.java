@@ -13,7 +13,7 @@ public class BinarySearch {
         int rightBound = nums.length - 1;   // keep index numbers only
         int middle = rightBound / 2; // keep index numbers only
 
-        // algo
+        // algo, can optimize to use less memory
         while (target != nums[middle]) {    // will be dividing until target becomes the middle
             if (rightBound - leftBound <= 1) {
                 if (nums[rightBound] != target)     // middle is left element if two elements are left, so it will be checked already in the while statement, check for the right element of the pair
@@ -22,7 +22,7 @@ public class BinarySearch {
 
             if (target < nums[middle])
                 rightBound = middle - 1;
-            
+
             if (target > nums[middle])
                 leftBound = middle + 1;
 
